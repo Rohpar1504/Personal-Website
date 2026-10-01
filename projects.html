@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects - Rohan Pareek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo">RP.</a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="experience.html">experience</a>
+      <a href="research.html">research</a>
+      <a href="projects.html" class="active">projects</a>
+      <a href="misc.html">misc</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">resume</a>
+      <button id="theme-btn" class="toggle" role="switch" aria-checked="false" aria-label="dark mode" title="dark mode"><span class="knob"></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <h1>Projects</h1>
+    <p class="sub">Things I've built on my own time. Code for most of them is on
+      <a href="https://github.com/Rohpar1504" target="_blank" rel="noopener">github</a>.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div class="projects">
+
+  <div class="project">
+    <h3><a href="https://github.com/Rohpar1504/ResuMate" target="_blank" rel="noopener">ResuMate</a></h3>
+    <p>Tailors your resume to a specific job posting. Parses your resume, pulls context
+      from your GitHub repos, and rewrites it against what the job is asking for. Runs on
+      Claude, or fully local with Ollama if you don't want to pay for API calls.</p>
+    <p class="stack">FastAPI · Next.js · SQLite · Claude / Ollama</p>
+  </div>
+
+  <div class="project">
+    <!-- TODO: add the real FridgeVision repo link -->
+    <h3>FridgeVision</h3>
+    <p>Take a picture of your fridge and ask where stuff is. Made for visually impaired
+      users. OpenCV finds the shelves, YOLO finds the items (~90% accurate), and an LLM
+      handles the questions. Also does shopping lists and recipes.</p>
+    <p class="stack">Flask · OpenCV · YOLO · OpenAI API</p>
+  </div>
+
+  <div class="project">
+    <h3><a href="https://github.com/Rohpar1504/DevLens" target="_blank" rel="noopener">DevLens</a></h3>
+    <p>A GitHub app that reviews your pull requests and leaves inline comments. It indexes
+      the repo with RAG so the comments actually know about the rest of the codebase.</p>
+    <p class="stack">FastAPI · Redis · LangChain · ChromaDB · GitHub Apps</p>
+  </div>
+
+  <div class="project">
+    <h3><a href="https://github.com/Rohpar1504/PrivateMind" target="_blank" rel="noopener">PrivateMind</a></h3>
+    <p>An offline "second brain." Feed it your notes and PDFs, ask questions about them,
+      and it quizzes you with spaced repetition. Everything runs locally, nothing
+      leaves your laptop.</p>
+    <p class="stack">FastAPI · ChromaDB · Ollama · React · Docker</p>
+  </div>
+
+  <div class="project">
+    <h3><a href="https://github.com/Rohpar1504/CoinCast" target="_blank" rel="noopener">CoinCast</a></h3>
+    <p>Forecasts prices for 10+ cryptocurrencies with Holt's exponential smoothing, with
+      a dashboard to compare the forecast bands against what actually happened.
+      (Spoiler: crypto is hard to predict.)</p>
+    <p class="stack">FastAPI · statsmodels · React · Chart.js</p>
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Rohan Pareek - <a href="tel:+14479022190">+1 (447) 902-2190</a> - <a href="mailto:rohanpareek951@gmail.com">rohanpareek951@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
