@@ -153,7 +153,7 @@ header.hero {
 
 .hero-inner {
   width: 100%;
-  max-width: 700px;
+  max-width: 780px;
 }
 
 .hero h1 {
@@ -169,12 +169,16 @@ header.hero {
 
 .hero p {
   color: #c9d2e0;
-  font-size: 17px;
-  margin: 0 auto 18px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.55;
+  margin: 0 auto 20px;
 }
 
 .hero .links {
   margin-top: 30px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .hero .links a {
@@ -373,6 +377,12 @@ li {
   width: auto;
   margin-right: 10px;
   vertical-align: -0.12em;
+}
+
+/* the aws mark is wide and short, so give it a bit more height */
+.inline-logo.wide {
+  height: 1.35em;
+  vertical-align: -0.3em;
 }
 
 .misc-grid {
