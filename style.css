@@ -1,4 +1,4 @@
-/* colors - illinois orange + navy */
+/* colors - illinois orange + navy (light theme only) */
 :root {
   --bg: #efe5d3;
   --text: #2a2620;
@@ -11,17 +11,6 @@
   --shadow: rgba(60, 40, 10, 0.08);
 }
 
-[data-theme="dark"] {
-  --bg: #121a28;
-  --text: #dde2ea;
-  --muted: #95a0b2;
-  --navy: #0b1424;
-  --orange: #ff7a50;
-  --line: #27344a;
-  --box: #18233a;
-  --card: #1a2539;
-  --shadow: rgba(0, 0, 0, 0.35);
-}
 
 * {
   box-sizing: border-box;
@@ -65,8 +54,9 @@ nav {
   top: 0;
   z-index: 10;
   background: var(--navy);
-  font-family: "Space Mono", Menlo, monospace;
-  font-size: 16px;
+  font-family: "Nunito", -apple-system, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 /* nav bar gets more room than the page text */
@@ -108,8 +98,8 @@ nav a:hover {
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 800;
+  font-size: 26px;
 }
 
 .nav-links {
@@ -117,45 +107,6 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 28px;
   align-items: center;
-}
-
-/* dark mode switch - 3px gap around the knob in both positions */
-.toggle {
-  position: relative;
-  flex-shrink: 0;
-  width: 44px;
-  height: 24px;
-  padding: 0;
-  border: none;
-  border-radius: 12px;
-  background: #ffffff22;
-  box-shadow: inset 0 0 0 1px #ffffff80;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.knob {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #fff;
-  transition: left 0.2s;
-}
-
-.toggle[aria-checked="true"] {
-  background: var(--orange);
-  box-shadow: none;
-}
-
-.toggle[aria-checked="true"] .knob {
-  left: 23px;
-}
-
-.toggle:hover {
-  box-shadow: inset 0 0 0 1px #fff;
 }
 
 /* header */
@@ -295,6 +246,14 @@ header.page-head {
   font-size: 17px;
 }
 
+.chant {
+  color: #ff7a50 !important;
+  font-weight: 800;
+  font-size: 22px !important;
+  letter-spacing: 6px;
+  padding-left: 6px;
+}
+
 .sub a {
   color: #fff;
 }
@@ -405,6 +364,14 @@ li {
 
 .card ul {
   margin: 8px 0 12px;
+}
+
+/* small logo sitting in front of a card title */
+.inline-logo {
+  height: 1em;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: -0.12em;
 }
 
 .misc-grid {
@@ -564,9 +531,6 @@ nav.open .menu-btn span:nth-child(3) {
     color: var(--orange);
   }
 
-  .toggle {
-    margin-top: 14px;
-  }
 }
 
 /* phones */
