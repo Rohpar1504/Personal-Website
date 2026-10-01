@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   btn.setAttribute("aria-checked", document.documentElement.getAttribute("data-theme") === "dark");
 
+  // hamburger menu on phones
+  var nav = document.querySelector("nav");
+  var menuBtn = document.querySelector(".menu-btn");
+  menuBtn.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open);
+  });
+
   btn.addEventListener("click", function () {
     var cur = document.documentElement.getAttribute("data-theme");
     setTheme(cur === "dark" ? "light" : "dark");
