@@ -243,7 +243,8 @@ header.page-head {
 
 .page-head .sub {
   margin: 0;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .chant {
@@ -391,6 +392,26 @@ li {
   white-space: nowrap;
 }
 
+/* small github box next to a project name */
+.gh-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+  vertical-align: middle;
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.gh-icon:hover {
+  background: var(--orange);
+  color: #fff;
+}
+
 /* github link with the logo */
 .stack + p {
   margin-top: 12px;
@@ -399,7 +420,20 @@ li {
 .gh-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
+  font-family: "Space Mono", Menlo, monospace;
+  font-size: 14px;
+  color: var(--orange);
+  text-decoration: none;
+  border: 1px solid var(--orange);
+  border-radius: 999px;
+  padding: 5px 16px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.gh-link:hover {
+  background: var(--orange);
+  color: #fff;
 }
 
 /* projects */
@@ -436,6 +470,21 @@ li {
 
 .misc li::marker {
   color: var(--orange);
+}
+
+/* lists with an emoji instead of a bullet (misc page) */
+.icons {
+  list-style: none;
+  padding-left: 0;
+}
+
+.icons li {
+  margin-bottom: 10px;
+}
+
+.ico {
+  display: inline-block;
+  width: 1.8em;
 }
 
 /* footer */
